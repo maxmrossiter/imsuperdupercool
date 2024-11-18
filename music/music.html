@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Feature</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Music Player</h1>
+    <audio id="audio" src="your-audio-file.mp3" preload="auto"></audio>
+    <div>
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('play');
+        const pauseButton = document.getElementById('pause');
+        const stopButton = document.getElementById('stop');
+        const volumeControl = document.getElementById('volume');
+
+        // Play the audio
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // Pause the audio
+        pauseButton.addEventListener('click', () => {
+            audio.pause();
+        });
+
+        // Stop the audio
+        stopButton.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0; // Reset to start
+        });
+
+        // Adjust the volume
+        volumeControl.addEventListener('input', (event) => {
+            audio.volume = event.target.value;
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+</head>
+<body style="background-color: lightblue;">
+    <h1>Hello, World!</h1>
+</body>
+</html>
