@@ -1,45 +1,14 @@
 <!DOCTYPE html>
-<h1>Hello</h1>
-<html>
-  <head>
-    <title>My home page</title>
-  </head>
-  <body>
-    <h1>Welcome to my website and game
-    </h1>
-    <p>
-        One of my hobbies is playing soccer
-    </p>
-  </p>
-  Another one of my hobbies is working out and going to the gym
-  </body>
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change Background Color</title>
-</head>
-<body style="background-color: lightblue;">
-    <h1>Hello, World!</h1>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
+    <title>Max Rossiter - Personal Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            background-color: lightblue;
         }
         img {
             max-width: 100%;
@@ -49,7 +18,72 @@
     </style>
 </head>
 <body>
-    <h1>My Image</h1>
-    <img src="<" alt="Description of the image">
+    <header>
+        <nav>
+            <h1 style="color: white;">Max Rossiter</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="discovery.html">Discovery</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="grid">
+                <div>
+                    <img src="images/professional-photo.jpg" alt="Max Rossiter" class="profile-img">
+                    <h2>Welcome to my website and game</h2>
+                    <p>Hi, I'm Max Rossiter, a student at the University of Minnesota Duluth. I'm passionate about technology and innovation, always eager to learn and create something new.</p>
+                    <p>One of my hobbies is playing soccer</p>
+                    <p>Another one of my hobbies is working out and going to the gym</p>
+                </div>
+                <div>
+                    <video width="100%" controls>
+                        <source src="videos/welcome-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="hobbies">
+            <h2>My Hobbies</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="images/hobby1.jpg" alt="Photography">
+                    <h3>Photography</h3>
+                    <p>Capturing moments and perspectives through my lens, specializing in landscape and street photography.</p>
+                </div>
+                <div class="card">
+                    <img src="images/hobby2.jpg" alt="Rock Climbing">
+                    <h3>Rock Climbing</h3>
+                    <p>Challenging myself both physically and mentally while exploring beautiful outdoor locations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <audio controls>
+            <source src="music/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Max Rossiter. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/maxrossiter" class="btn">LinkedIn</a>
+                <a href="https://github.com/maxrossiter" class="btn">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
