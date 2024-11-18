@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Rossiter - Personal Website</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: lightblue;
+<html>
+  <head>
+    <title>My home page</title>
+    <script>
+      // Function to handle autoplay
+      window.onload = function() {
+        var audio = document.getElementById('backgroundMusic');
+        // Try to play automatically
+        var playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+          playPromise.then(_ => {
+            // Autoplay started successfully
+          })
+          .catch(error => {
+            // Show play button if autoplay was prevented
+            console.log("Autoplay prevented. Please use the play button.");
+          });
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #333;
+      }
+    </script>
+    <script>
+        // Function to handle autoplay
+        window.onload = function() {
+            var audio = document.getElementById('backgroundMusic');
+            // Try to play automatically
+            var playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started successfully
+                })
+                .catch(error => {
+                    // Show play button if autoplay was prevented
+                    console.log("Autoplay prevented. Please use the play button.");
+                });
+            }
         }
-    </style>
+    </script>
 </head>
 <body>
     <header>
@@ -70,8 +92,8 @@
     </main>
 
     <div class="music-player">
-        <audio controls>
-            <source src="/music/background-music.mp3" type="audio/mpeg">
+        <audio id="backgroundMusic" controls autoplay>
+            <source src="background-music.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
