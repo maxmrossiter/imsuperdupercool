@@ -62,8 +62,9 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn" id="submitBtn">Send Message</button>
                     </form>
+                    <div id="formMessage" style="margin-top: 1rem;"></div>
                 </div>
             </div>
 
@@ -76,8 +77,8 @@
     </main>
 
     <div class="music-player">
-        <audio controls>
-            <source src="music/background-music.mp3" type="audio/mpeg">
+        <audio controls autoplay>
+            <source src="music/moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -100,6 +101,60 @@
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Form validation and handling
+    const form = document.querySelector('.contact-form');
+    const formMessage = document.getElementById('formMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        // Basic validation
+        if (name.length < 2) {
+            showMessage('Name must be at least 2 characters long', 'error');
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            showMessage('Please enter a valid email address', 'error');
+            return;
+        }
+        
+        if (subject.length < 3) {
+            showMessage('Subject must be at least 3 characters long', 'error');
+            return;
+        }
+        
+        if (message.length < 10) {
+            showMessage('Message must be at least 10 characters long', 'error');
+            return;
+        }
+        
+        // If validation passes, show success message
+        showMessage('Message sent successfully! I will get back to you soon.', 'success');
+        form.reset();
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function showMessage(text, type) {
+        formMessage.textContent = text;
+        formMessage.style.color = type === 'error' ? '#dc3545' : '#198754';
+        formMessage.style.padding = '1rem';
+        formMessage.style.marginTop = '1rem';
+        formMessage.style.backgroundColor = type === 'error' ? '#f8d7da' : '#d1e7dd';
+        formMessage.style.borderRadius = '4px';
+    }
 </script>
 </body>
 </html>
