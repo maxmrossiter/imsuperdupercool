@@ -344,3 +344,19 @@ Short Notes:
 Identify the AI tools you plan to use and familiarize yourself with them ahead of time.
 
 Good luck with your project! Remember to approach each task methodically and don't hesitate to reach out if you need assistance.
+
+7. AI Tools and Integration
+AI Tools:
+- OpenArt: OpenArt
+- Craiyon (Formerly DALL·E Mini): Craiyon
+- Stable Diffusion Online: Stable Diffusion Online
+- DeepAI: DeepAI
+- Luma ai
+- Lumen5: Lumen5
+- Kapwing: Kapwing
+- Canva: Canva
+
+Integration:
+- Use AI tools to generate images and videos for your website.
+- Integrate AI-generated content into relevant sections of your website.
+- Ensure proper attribution and licensing for AI-generated content.
