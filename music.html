@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Selection - Max Rossiter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        .music-selection {
+            max-width: 800px;
+            margin: 8rem auto 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .playlist-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .playlist-item.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .music-controls {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="color: white;">Max Rossiter</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="discovery.html">Discovery</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="music-selection">
+            <h2>Background Music Selection</h2>
+            <p>Choose your preferred background music while browsing the site:</p>
+
+            <div class="playlist">
+                <div class="playlist-item" onclick="selectTrack(1)">
+                    <span>🎵</span>
+                    <div>
+                        <h4>Moonshine</h4>
+                        <p>Relaxing background music</p>
+                    </div>
+                    <audio id="track1">
+                        <source src="music/moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div class="playlist-item" onclick="selectTrack(2)">
+                    <span>🎵</span>
+                    <div>
+                        <h4>Silent Mode</h4>
+                        <p>Browse without music</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-controls">
+                <button class="btn" onclick="playSelected()">Play Selected</button>
+                <button class="btn" onclick="stopAll()">Stop Music</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Max Rossiter. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/maxrossiter" class="btn">LinkedIn</a>
+                <a href="https://github.com/maxrossiter" class="btn">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentTrack = null;
+        const tracks = {};
+
+        function initTracks() {
+            tracks[1] = document.getElementById('track1');
+        }
+
+        function selectTrack(trackNum) {
+            // Remove active class from all items
+            document.querySelectorAll('.playlist-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to selected item
+            document.querySelectorAll('.playlist-item')[trackNum-1].classList.add('active');
+            
+            stopAll();
+            currentTrack = trackNum;
+        }
+
+        function playSelected() {
+            if (currentTrack && tracks[currentTrack]) {
+                stopAll();
+                tracks[currentTrack].play();
+            }
+        }
+
+        function stopAll() {
+            Object.values(tracks).forEach(track => {
+                track.pause();
+                track.currentTime = 0;
+            });
+        }
+
+        // Initialize when page loads
+        window.onload = initTracks;
+    </script>
+</body>
+</html>
