@@ -111,7 +111,7 @@
 
     <div class="music-player">
         <audio controls autoplay>
-            <source src="music/background-music.mp3" type="audio/mpeg">
+            <source src="music/moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -125,5 +125,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Add mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

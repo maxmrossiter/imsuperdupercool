@@ -21,6 +21,7 @@
     <header>
         <nav>
             <h1 style="color: white;">Max Rossiter</h1>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html">About Me</a></li>
@@ -100,11 +101,30 @@
     </main>
 
     <div class="music-player">
-        <audio controls>
-            <source src="/music/background-music.mp3" type="audio/mpeg">
+        <audio controls preload="auto">
+            <source src="music/moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
+
+    <script>
+        // Add mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Add loading indicator for music player
+        const musicPlayer = document.querySelector('.music-player');
+        const audio = musicPlayer.querySelector('audio');
+        
+        musicPlayer.classList.add('loading');
+        audio.addEventListener('canplaythrough', () => {
+            musicPlayer.classList.remove('loading');
+        });
+    </script>
 
     <footer>
         <div class="footer-content">

@@ -110,6 +110,8 @@
 <body>
     <header>
         <nav>
+            <h1 style="color: white;">Max Rossiter</h1>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html">About Me</a></li>
@@ -250,5 +252,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Add mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
