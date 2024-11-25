@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Projects - Max Rossiter</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="color: white;">Max Rossiter</h1>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../aboutme.html">About Me</a></li>
+                <li><a href="../resume.html">Resume</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../game.html">Game</a></li>
+                <li><a href="../discovery.html">Discovery</a></li>
+                <li><a href="../contactme.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-projects">
+            <h2>Portfolio Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Project Title 1</h3>
+                <p>Description of project 1. This project involves...</p>
+                <div class="project-links">
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">View Code</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Project Title 2</h3>
+                <p>Description of project 2. This project involves...</p>
+                <div class="project-links">
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">View Code</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Project Title 3</h3>
+                <p>Description of project 3. This project involves...</p>
+                <div class="project-links">
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">View Code</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <audio controls>
+            <source src="../music/moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Max Rossiter. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/maxrossiter" class="btn">LinkedIn</a>
+                <a href="https://github.com/maxrossiter" class="btn">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
