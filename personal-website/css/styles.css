@@ -53,7 +53,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--accent-color);
+    color: var (--accent-color);
 }
 
 /* Main Content */

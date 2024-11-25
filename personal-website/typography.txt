@@ -1,0 +1,12 @@
+# Typography and Color Scheme
+
+## Color Scheme
+- Primary Color: #2A4494
+- Secondary Color: #4C6EF5
+- Accent Color: #74C0FC
+- Background Color: #F8F9FA
+- Text Color: #212529
+
+## Typography
+- Body Font: Open Sans
+- Heading Font: Roboto
