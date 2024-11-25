@@ -48,6 +48,40 @@
             border-radius: 4px;
             margin-bottom: 1rem;
         }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .media-grid img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .media-grid img:last-child {
+            grid-column: 1 / -1;
+            height: 500px;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .project-card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card ul li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -71,103 +105,31 @@
         <section class="projects">
             <h2>My Projects</h2>
             
-            <!-- Course Projects -->
-            <h3>UMD Course Projects</h3>
+            <!-- Current Project -->
+            <h3>Current Project: Personal Portfolio Website</h3>
             <div class="project-card">
-                <img src="images/api-integration.jpg" alt="API Integration Project" class="project-image">
-                <h4>Weather & Activity API Integration</h4>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">APIs</span>
-                    <span class="tech-tag">JSON</span>
-                </div>
-                <p>Developed a Python application that integrates with weather and activity APIs to provide real-time data and suggestions. Implemented error handling, data parsing, and user-friendly output formatting.</p>
-                <div class="project-links">
-                    <a href="https://github.com/maxrossiter/weather-api" class="btn">View Weather API Code</a>
-                    <a href="https://github.com/maxrossiter/bored-api" class="btn">View Activity API Code</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="images/portfolio-website.jpg" alt="Portfolio Website" class="project-image">
-                <h4>Personal Portfolio Website</h4>
+                <img src="images/supercoolsphoto.png" alt="Portfolio Website" class="project-image">
+                <h4>Personal Portfolio Website Development</h4>
                 <div class="project-tech">
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
                     <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">API Integration</span>
                 </div>
-                <p>Created a responsive personal portfolio website showcasing projects and skills. Features include a number guessing game, music player integration, and contact form. Implemented modern design principles and responsive layouts.</p>
+                <p>This website represents my semester project showcasing web development skills including:</p>
+                <ul>
+                    <li>Responsive design implementation</li>
+                    <li>Interactive features like the game page</li>
+                    <li>API integrations for weather and activities</li>
+                    <li>Music player functionality</li>
+                    <li>AI-generated content integration</li>
+                </ul>
                 <div class="project-links">
                     <a href="https://github.com/maxrossiter/portfolio" class="btn">View Code</a>
-                    <a href="#" class="btn">Live Site</a>
                 </div>
             </div>
 
-            <!-- Personal Projects -->
-            <h3>Personal Projects</h3>
-            <div class="project-card">
-                <img src="images/personal-project1.jpg" alt="Personal Project 1" class="project-image">
-                <h4>Personal Portfolio Website</h4>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <p>A responsive portfolio website showcasing my projects and skills. Features include a number guessing game, weather integration, and contact form.</p>
-                <div class="project-links">
-                    <a href="#" class="btn">View Code</a>
-                    <a href="#" class="btn">Live Site</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="images/personal-project2.jpg" alt="Personal Project 2" class="project-image">
-                <h4>Weather Dashboard</h4>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Weather API</span>
-                </div>
-                <p>A weather dashboard application that displays current weather conditions and forecasts for multiple cities. Features interactive maps and charts.</p>
-                <div class="project-links">
-                    <a href="#" class="btn">View Code</a>
-                    <a href="#" class="btn">Live Demo</a>
-                </div>
-            </div>
-
-            <!-- AI-Generated Media -->
-            <h3>AI-Generated Media</h3>
-            <div class="project-card">
-                <img src="images/ai-generated1.jpg" alt="AI Generated Image 1" class="project-image">
-                <h4>AI-Generated Art 1</h4>
-                <p>An AI-generated artwork representing the fusion of technology and nature.</p>
-            </div>
-
-            <div class="project-card">
-                <img src="images/ai-generated2.jpg" alt="AI Generated Image 2" class="project-image">
-                <h4>AI-Generated Art 2</h4>
-                <p>An AI-generated visualization of a futuristic cityscape.</p>
-            </div>
-
-            <div class="project-card">
-                <video width="100%" controls>
-                    <source src="videos/ai-generated-video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h4>AI-Generated Video 1</h4>
-                <p>A short AI-generated video showcasing the potential of AI in video creation.</p>
-            </div>
-
-            <div class="project-card">
-                <video width="100%" controls>
-                    <source src="videos/ai-generated-video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h4>AI-Generated Video 2</h4>
-                <p>An AI-generated video exploring the concept of smart cities.</p>
-            </div>
-
-            <!-- UMD Video -->
+            <!-- UMD and Duluth Video Showcase -->
             <h3>UMD and Duluth</h3>
             <div class="project-card">
                 <video width="100%" controls>
@@ -175,7 +137,39 @@
                     Your browser does not support the video tag.
                 </video>
                 <h4>Life at UMD</h4>
-                <p>A short video about the University of Minnesota Duluth and the city of Duluth.</p>
+                <p>A creative 10-second showcase highlighting what I love most about UMD and the beautiful city of Duluth. This video demonstrates my ability to create engaging content using AI tools while capturing the essence of our university community.</p>
+            </div>
+
+            <!-- AI-Generated Media Showcase -->
+            <h3>AI-Generated Media Projects</h3>
+            <div class="project-card">
+                <h4>Technology and Innovation Series</h4>
+                <div class="project-tech">
+                    <span class="tech-tag">AI Generation</span>
+                    <span class="tech-tag">Digital Art</span>
+                    <span class="tech-tag">Video Production</span>
+                </div>
+                
+                <div class="media-grid">
+                    <img src="images/bridgeDuluth.png" alt="AI Generated Tech Visual 1" class="project-image">
+                    <img src="images/blacksandbeachDuluth.png" alt="AI Generated Tech Visual 2" class="project-image">
+                    <img src="images/iceformationsDuluth.png" alt="AI Generated Tech Visual 3" class="project-image">
+                    <img src="images/lakeSuperiorDuluth.png" alt="AI Generated Tech Visual 4" class="project-image">
+                    <img src="images/snowyCanalParkDuluth.png" alt="AI Generated Tech Visual 5" class="project-image">
+                </div>
+                
+                <h5>AI-Generated Videos</h5>
+                <div class="video-container">
+                    <video width="100%" controls>
+                        <source src="videos/ai-tech-future.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="100%" controls>
+                        <source src="videos/ai-innovation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>A collection of AI-generated media exploring themes of technology and innovation. This series demonstrates my ability to leverage AI tools for creative content generation while maintaining a cohesive narrative about technological advancement.</p>
             </div>
         </section>
     </main>
