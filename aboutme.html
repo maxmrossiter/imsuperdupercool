@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Max Rossiter</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: lightblue;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -30,65 +24,56 @@
         </nav>
     </header>
 
-    <script>
-        async function fetchActivity() {
-            try {
-                const response = await fetch('https://www.boredapi.com/api/activity');
-                const data = await response.json();
-                document.getElementById('activity').innerText = `Random Activity: ${data.activity}`;
-            } catch (error) {
-                document.getElementById('activity').innerText = 'Could not fetch activity at this time.';
-            }
-        }
-        window.onload = fetchActivity;
-    </script>
     <main>
         <section class="about-me">
             <h2>About Me</h2>
-            <div id="weather" class="weather-info">
-                Loading weather data...
-            </div>
-            <div id="activity" class="activity-info">
-                Loading activity data...
-            </div>
+            
+            <!-- Hobbies Section with 4 Images -->
             <div class="grid">
                 <div class="card">
                     <h3>Self-Interests & Hobbies</h3>
                     <div class="hobby-grid">
                         <div>
-                            <img src="/images/supercoolsphoto.png" alt="Photography">
-                            <p>Photography has been my creative outlet for the past 5 years. I love capturing the beauty of nature and urban landscapes around Duluth.</p>
+                            <img src="images/blacksandbeachDuluth.png" alt="Black Sand Beach">
+                            <p>I love exploring Duluth's unique beaches and natural wonders. Black Sand Beach is one of my favorite spots for photography and relaxation.</p>
                         </div>
                         <div>
-                            <img src="/images/rockclimingimage.jpg" alt="Rock Climbing">
-                            <p>Rock climbing challenges me to push my limits and solve complex problems. The climbing community in Duluth is amazing!</p>
+                            <img src="images/bridgeDuluth.png" alt="Aerial Bridge">
+                            <p>Photography is one of my passions, especially capturing iconic Duluth landmarks like the Aerial Lift Bridge during different times of day.</p>
                         </div>
                         <div>
-                            <img src="/images/aigenimage.jpg" alt="Coding">
-                            <p>Beyond coursework, I enjoy working on personal coding projects, particularly in web development and machine learning.</p>
+                            <img src="images/iceformationsDuluth.png" alt="Ice Formations">
+                            <p>Winter hiking along Lake Superior is incredible. I enjoy documenting the amazing ice formations that form along the shoreline.</p>
+                        </div>
+                        <div>
+                            <img src="images/lakeSuperiorDuluth.png" alt="Lake Superior">
+                            <p>Kayaking on Lake Superior gives me a unique perspective of the city and helps me stay active while enjoying nature.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Interesting Facts Section -->
             <div class="grid">
                 <div class="card">
-                    <h3>Interesting Facts</h3>
+                    <h3>Interesting Facts About Me</h3>
                     <ul>
-                        <li>I've hiked all of Duluth's sections of the Superior Hiking Trail</li>
-                        <li>I volunteer at the local animal shelter, helping with their website maintenance and digital presence</li>
+                        <li>I'm training to complete the Grandma's Marathon in Duluth this summer, which will be my first full marathon.</li>
+                        <li>I volunteer at the Duluth Farmers Market, helping local vendors set up their digital presence and payment systems.</li>
+                        <li>I'm learning Norwegian to connect with my family heritage and better understand Duluth's Nordic culture.</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- AI Generated Images Section -->
             <div class="grid">
                 <div class="card">
                     <h3>AI-Generated Artwork</h3>
                     <div class="ai-art">
-                        <img src="/photos/about-me-ai1.jpg" alt="AI Generated Art 1">
-                        <p>An AI's interpretation of technology and nature merging - representing my dual interests in computing and outdoor activities.</p>
-                        <img src="/photos/about-me-ai2.jpg" alt="AI Generated Art 2">
-                        <p>AI-generated visualization of Duluth's landscape with a futuristic twist, symbolizing the blend of natural beauty and technological progress.</p>
+                        <img src="images/aigenimage.jpg" alt="AI Generated Future Duluth">
+                        <p>An AI-generated vision of Duluth's future skyline, blending historical architecture with sustainable technology.</p>
+                        <img src="images/supercoolsphoto.png" alt="AI Generated Northern Lights">
+                        <p>AI interpretation of the Northern Lights over Lake Superior, inspired by the magical displays we sometimes see in Duluth.</p>
                     </div>
                 </div>
             </div>
@@ -96,8 +81,8 @@
     </main>
 
     <div class="music-player">
-        <audio controls autoplay>
-            <source src="music/background-music.mp3" type="audio/mpeg">
+        <audio controls>
+            <source src="moonshine-prigida-main-version-01-36-17027.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
@@ -113,7 +98,6 @@
     </footer>
 
     <script>
-        // Add mobile menu functionality
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
         
