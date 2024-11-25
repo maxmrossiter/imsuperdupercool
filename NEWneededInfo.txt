@@ -1,0 +1,346 @@
+Final Preparation Checklist for Project 1: Personal Website Development
+Dear Students,
+As you embark on creating your personal website for Semester Project 1, it's crucial to prepare thoroughly to ensure a smooth development process and a high-quality end product. This checklist combines all the necessary technological setups, detailed content requirements for each page of your website, instructions on file organization, and a list of free, reputable AI tools you can use for various tasks in your project. Please use this as a guide to organize your tasks and materials effectively.
+
+Instructions for Saving Files and Organizing Folders
+Project Root Folder: Create a main folder named personal-website where all your project files will reside.
+Subfolders:
+images: Store all image files here.
+videos: Store all video files here.
+music: Store music files for your website.
+css: For all your CSS stylesheets.
+js: For all your JavaScript files.
+assets: For additional assets like fonts or documents.
+File Naming Conventions:
+Use lowercase letters and hyphens instead of spaces. Example: professional-photo.jpg
+Name files descriptively. Example: about-me-video.mp4
+Version Control: (Covered in Lecture)
+Initialize a Git repository in your personal-website folder.
+Commit changes with meaningful messages.
+Push your commits to your GitHub repository regularly.
+
+1. Technology Setup
+a. Software Installation
+Visual Studio Code (VSCode)
+Download and Install: VSCode Official Website
+Install Recommended Extensions:
+List of Extensions to Install:
+General Web Development Extensions:
+Live Server by Ritwick Dey
+Prettier - Code formatter by Prettier
+Path Intellisense by Christian Kohler
+GitLens — Git supercharged by GitKraken
+Short Notes:
+Ensure all the above extensions are installed to enhance your coding experience and productivity.
+
+Git
+Install Git on Your Laptop:
+Windows: Download Git for Windows
+Mac: Use Homebrew (brew install git) or Download Git for Mac
+Short Notes:
+
+
+
+b. GitHub Account
+Sign Up with UMD Email
+Create a GitHub Account: GitHub Signup
+Verify Student Status: GitHub Student Pack
+Short Notes:
+Record your GitHub username and confirm that you've activated the Student Pack for additional benefits.
+
+c. Personal Email Account
+Ensure Access to a Non-UMD Email (gmail)
+Purpose: Some AI tools may require a personal email account.
+Short Notes:
+Keep your personal email credentials handy for registering on AI platforms.
+
+d. LinkedIn Account
+Set Up or Update Your LinkedIn Profile
+Create/Update Account: LinkedIn Signup
+Profile Checklist:
+Professional photo
+Headline
+Summary
+Education
+Experience
+Skills and endorsements
+Customized URL (e.g., linkedin.com/in/yourname)
+Short Notes:
+Update any outdated information and note your customized LinkedIn URL for use on your website.
+
+2. Design and Development Planning
+a. Layout
+Pages to Include:
+Home Page (index.html)
+About Me aboutme.html
+Resume/CV resume.html
+Projects/Portfolio project.html
+Videogame Page game.html
+Discovery Page discovery.html
+Contact Information contactme.html
+Sketch Wireframes  (Skip This part Highlighted in Yellow)
+Task: Create basic sketches or use tools like Figma or Adobe XD.
+Save Wireframes: Save your designs in the designs folder as homepage-wireframe.png, etc.
+Short Notes:
+Outline the main sections and features of each page to guide your development process.
+
+b. Theme Selection
+Choose a Color Scheme
+Tools: https://huemint.com/website-1/
+Task: Select a harmonious palette that aligns with your personal brand.
+Short Notes:
+Write down the hex codes of your chosen colors to ensure consistency across your website.
+
+Select Typography
+Task: Choose readable fonts for headings and body text.
+Resource: Google Fonts
+Save Choices: Note your choices in a text file named typography.txt in the assets folder.
+Short Notes:
+Record the font names and styles (e.g., Open Sans for body text, Roboto for headings) for consistent use.
+
+c. Interactive Features Planning
+AI-Powered Web Game
+Conceptualize the Game:
+Define the game's objective, rules, and AI integration points.
+Decide on the genre (e.g., quiz, puzzle, adventure).
+Design Game Flow:
+Outline user interactions and game progression.
+Plan for scoring, health, levels, or other engagement features.
+Short Notes:
+Summarize your game concept and list the AI functionalities you plan to include.
+
+Interactive API Integration
+Select an API:
+Choose an API that adds value to your site (e.g., weather data, news).
+Plan API Usage:
+Determine where and how the API data will be displayed.
+Consider user interaction with the API content.
+Short Notes:
+Note the API's documentation link and any API keys or credentials needed.
+
+Music Feature
+Integration Planning:
+Decide on the placement of the music player (e.g., header, footer).
+Ensure controls are intuitive and non-intrusive.
+Save Music Files: Place your music files in the music folder.
+Short Notes:
+List the tracks you've selected and confirm they are royalty-free or properly licensed.
+
+3. Materials and Content Needed for Each Page
+a. Home Page
+Professional Photo
+Requirements:
+High-quality headshot.
+Good lighting and neutral background.
+Save as professional-photo.jpg in the images folder.
+Short Notes:
+Ensure your photo is professional and reflects the image you want to present.
+
+Greeting Message
+Task: Craft a welcoming message or tagline (1-2 sentences).
+Short Notes:
+Write a brief, engaging message that introduces visitors to your site.
+
+Short Hobbies with Pictures
+At Least 2 Short Hobbies:
+Brief descriptions (1-2 sentences) for each.
+Save images as hobby1.jpg, hobby2.jpg in the images folder.
+Short Notes:
+Select hobbies that showcase your personality and consider how the images complement the descriptions.
+
+Welcoming Video
+Task: Create a short video introducing yourself (10 sec or longer).
+Save Video: Save as welcome-video.mp4 in the videos folder.
+Short Notes:
+Plan key points to cover in the video and ensure good audio and video quality.
+
+b. About Me Page
+In-Depth Details About Yourself
+Self-Interests and Hobbies:
+Provide detailed descriptions for your hobbies and include at least 3 pictures.
+Short Notes:
+Highlight experiences and stories that give depth to your interests.
+
+Interesting Facts or Activities
+At Least 2 Interesting Facts about yourself or Activities you volunteer in.
+Short Notes:
+Choose facts that are unique and will engage your audience.
+
+AI-Generated Images (at least 2)
+Include Relevant Images:
+Save images as about-me-ai1.jpg, about-me-ai2.jpg in the images folder.
+Short Notes:
+Ensure images are relevant and enhance the content of your page.
+
+c. Resume/CV Page
+Professional Experience
+List Work Experience:
+Positions in reverse chronological order.
+Short Notes:
+Include job titles, company names, dates, and key accomplishments.
+
+Education
+Detail Educational Background.
+Short Notes:
+Mention degrees earned, institutions, and any honors or awards.
+
+Major or Field of Study
+Section About Your Major.
+Short Notes:
+Explain why you chose your major and how it aligns with your career aspirations.
+
+Skills and Certifications
+Highlight Your Skills.
+Short Notes:
+Categorize skills (e.g., programming languages, tools, soft skills) for clarity.
+
+Downloadable Resume
+Prepare a PDF Version:
+Save as resume.pdf in the assets folder.
+Short Notes:
+Double-check formatting and hyperlinks before saving the final version.
+
+d. Projects/Portfolio Page
+Video About UMD or the City of Duluth
+Create a 10-Second Video using AI:
+Save as umd-video.mp4 in the videos folder.
+Short Notes:
+Produce a short, engaging video about what you like most about UMD or the city of Duluth.
+The video should show a genuine creative approach.
+Note: The best videos will be published on UMD social media.
+
+AI-Generated Media Related to a Topic of Interest  (At least 2 Videos and 5 Pics)
+Select a Topic You Are Passionate About.
+Short Notes:
+Choose a topic that allows for creative expression through AI-generated media.
+
+Include AI-Generated Videos and Pictures:
+Save media in the images and videos folders with descriptive names.
+Short Notes:
+Ensure the media enhances the understanding of your chosen topic.
+
+Project Descriptions
+Detail Your Projects. (This Personal Website project you are currently working on)
+Short Notes:
+Focus on the problem addressed, your role, and the technologies used.
+
+
+e. Videogame Page
+Theme Game Title
+Decide on a Game Title.
+Short Notes:
+Select a title that is catchy and reflective of the game's theme.
+
+Instructions on How to Play the Game
+Write Clear Instructions.
+Short Notes:
+Ensure instructions are easy to follow, enhancing user experience.
+
+Simplified Game Requirements
+Plan Basic Game Mechanics.
+Short Notes:
+Identify core features needed for the game to function properly.
+
+List of Features to Add
+Identify Additional Features.
+Short Notes:
+Prioritize features based on their impact and feasibility.
+
+Game Assets
+Prepare or Source Assets:
+Save assets in appropriate folders (images, music, js).
+Short Notes:
+
+f. Discovery Page
+Topic Selection
+Open this Excel file: https://docs.google.com/spreadsheets/d/11sJwq_LhapcMJuPhSZ79ztWL9nymF1R0lR8iAU-RTow/edit?usp=sharing
+Choose a unique Topic (that no one has chosen yet) to Explore.
+Add your name and the topic you choose to the list
+Short Notes:
+Select a topic that aligns with our class, and your interests and potential career paths.
+
+List of Companies Related to the Topic
+Research and List at least two Companies related to the topic.
+Short Notes:
+Gather information about each company to provide insightful content.
+
+Career Fair Companies
+ Identify Two Companies from the Career Fair
+Select two companies you are interested in working for as a summer intern.
+Write why you think you are a good fit for each company.
+Highlight how your skills, experiences, and interests align with the companies' values and opportunities.
+
+References and Links
+ Provide External Resources
+Link to companies' websites or related articles.
+Ensure all references are properly cited.
+
+g. Contact Information Page
+Contact Details
+Professional Email Address.
+Short Notes:
+Use an email that you check regularly and is appropriate for professional contacts.
+
+Social Media Links
+Professional Profiles:
+LinkedIn URL.
+GitHub URL.
+Other relevant platforms.
+Short Notes:
+Double-check that all links direct to the correct profiles.
+
+Contact Form 
+Design Form Fields. Name, email, subject, message.
+Short Notes:
+Consider how you will process form submissions.
+
+Quizzes and Submission Deadlines
+Project Quiz 1 (Project 1 Progress)
+Due: Friday, October 4, 2024
+Requirements:
+Submit screenshots of GitHub account setup.
+Show basic website structure and initial content drafts.
+Short Notes:
+Prepare the required materials and ensure submission before the deadline.
+
+Quiz 2 (Project 1 Progress 2)
+Due: Friday, October 25, 2024
+Requirements:
+Submit screenshots showing:
+AI-powered web game integration.
+Music feature implementation.
+Inclusion of AI-generated media.
+Short Notes:
+Check each requirement off as you complete it to stay organized.
+
+Final Project Submission
+Due: November 1st, 2024
+Requirements:
+Deploy your website on GitHub Pages.
+Submit the website link, video presentation.
+Short Notes:
+Allocate time for deployment and testing before the due date to avoid last-minute issues.
+
+6. List of Free, Reputable AI Tools
+AI Image Generation
+OpenArt: OpenArt
+Craiyon (Formerly DALL·E Mini): Craiyon
+Stable Diffusion Online: Stable Diffusion Online
+DeepAI: DeepAI
+AI Video Generation
+Luma ai
+Lumen5: Lumen5
+Kapwing: Kapwing
+Canva: Canva
+Interactive API Integration
+Public APIs Directory: Public APIs
+OpenWeatherMap: OpenWeatherMap
+NewsAPI: NewsAPI
+Quotes API: They Said So Quotes API
+Music Resources
+Free Music Archive: Free Music Archive
+Incompetech: Incompetech
+Short Notes:
+Identify the AI tools you plan to use and familiarize yourself with them ahead of time.
+
+Good luck with your project! Remember to approach each task methodically and don't hesitate to reach out if you need assistance.
