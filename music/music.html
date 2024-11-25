@@ -3,96 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Feature</title>
-    <link rel="stylesheet" href="../styles.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: var(--background-color);
-            margin: 0;
-            padding: 20px;
-        }
-        .music-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-        }
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .volume-control {
-            width: 100%;
-            max-width: 200px;
-            margin: 20px auto;
-        }
-    </style>
-</head>
+    <title>Music Player - Max Rossiter</title>
+    <link rel="stylesheet" href="../personal-website/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 <body>
-    <div class="music-container">
-        <h1>Background Music Player</h1>
-        <audio id="audio" src="moonshine-prigida-main-version-01-36-17027.mp3" preload="auto"></audio>
-        <div class="controls">
-            <button id="play" class="btn">Play</button>
-            <button id="pause" class="btn">Pause</button>
-            <button id="stop" class="btn">Stop</button>
-        </div>
-        <div class="volume-control">
-            <label for="volume">Volume:</label>
-            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
-        </div>
-    </div>
+    <header>
+        <nav>
+            <h1 style="color: white;">Max Rossiter</h1>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../personal-website/aboutme.html">About Me</a></li>
+                <li><a href="../personal-website/resume.html">Resume</a></li>
+                <li><a href="../personal-website/projects.html">Projects</a></li>
+                <li><a href="../personal-website/game.html">Game</a></li>
+                <li><a href="../personal-website/discovery.html">Discovery</a></li>
+                <li><a href="../personal-website/contactme.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="music-section">
+            <div class="music-container">
+                <h2>Background Music Settings</h2>
+                <p>Choose and control the background music for your browsing experience:</p>
+                
+                <div class="music-player-container">
+                    <audio id="audio" src="moonshine-prigida-main-version-01-36-17027.mp3" preload="auto"></audio>
+                    
+                    <div class="track-info">
+                        <h3>Now Playing</h3>
+                        <p id="track-name">Moonshine - Relaxing Background Music</p>
+                    </div>
+
+                    <div class="controls">
+                        <button id="play" class="btn control-btn">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                        <button id="pause" class="btn control-btn">
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button id="stop" class="btn control-btn">
+                            <i class="fas fa-stop"></i> Stop
+                        </button>
+                    </div>
+
+                    <div class="volume-control">
+                        <label for="volume">Volume Control:</label>
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                        <span id="volume-value">50%</span>
+                    </div>
+
+                    <div class="music-preferences">
+                        <label>
+                            <input type="checkbox" id="autoplay-setting">
+                            Autoplay music when visiting pages
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Max Rossiter. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/maxrossiter" class="btn">LinkedIn</a>
+                <a href="https://github.com/maxrossiter" class="btn">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <script>
         const audio = document.getElementById('audio');
         const playButton = document.getElementById('play');
         const pauseButton = document.getElementById('pause');
         const stopButton = document.getElementById('stop');
         const volumeControl = document.getElementById('volume');
+        const volumeValue = document.getElementById('volume-value');
+        const autoplaySetting = document.getElementById('autoplay-setting');
 
-        // Play the audio
+        // Initialize from saved preferences
+        function initializePlayer() {
+            const savedVolume = localStorage.getItem('preferredVolume') || 0.5;
+            const savedAutoplay = localStorage.getItem('autoplayEnabled') === 'true';
+            
+            audio.volume = savedVolume;
+            volumeControl.value = savedVolume;
+            volumeValue.textContent = `${Math.round(savedVolume * 100)}%`;
+            autoplaySetting.checked = savedAutoplay;
+            
+            // Update play button state
+            updatePlayButtonState();
+        }
+
+        // Play audio
         playButton.addEventListener('click', () => {
             audio.play();
+            updatePlayButtonState();
         });
 
-        // Pause the audio
+        // Pause audio
         pauseButton.addEventListener('click', () => {
             audio.pause();
+            updatePlayButtonState();
         });
 
-        // Stop the audio
+        // Stop audio
         stopButton.addEventListener('click', () => {
             audio.pause();
-            audio.currentTime = 0; // Reset to start
+            audio.currentTime = 0;
+            updatePlayButtonState();
         });
 
-        // Adjust the volume
+        // Volume control
         volumeControl.addEventListener('input', (event) => {
-            audio.volume = event.target.value;
+            const value = event.target.value;
+            audio.volume = value;
+            volumeValue.textContent = `${Math.round(value * 100)}%`;
+            localStorage.setItem('preferredVolume', value);
         });
 
-        // Save volume preference
-        volumeControl.addEventListener('change', (event) => {
-            localStorage.setItem('preferredVolume', event.target.value);
+        // Autoplay setting
+        autoplaySetting.addEventListener('change', (event) => {
+            localStorage.setItem('autoplayEnabled', event.target.checked);
         });
 
-        // Load saved volume preference
-        window.addEventListener('load', () => {
-            const savedVolume = localStorage.getItem('preferredVolume');
-            if (savedVolume !== null) {
-                audio.volume = savedVolume;
-                volumeControl.value = savedVolume;
-            }
+        // Update play button state
+        function updatePlayButtonState() {
+            playButton.style.display = audio.paused ? 'inline-block' : 'none';
+            pauseButton.style.display = audio.paused ? 'none' : 'inline-block';
+        }
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Initialize when page loads
+        window.addEventListener('load', initializePlayer);
+
+        // Handle audio ended event
+        audio.addEventListener('ended', () => {
+            updatePlayButtonState();
         });
     </script>
 
