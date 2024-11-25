@@ -95,15 +95,6 @@
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-
-        // Add loading indicator for music player
-        const musicPlayer = document.querySelector('.music-player');
-        const audio = musicPlayer.querySelector('audio');
-        
-        musicPlayer.classList.add('loading');
-        audio.addEventListener('canplaythrough', () => {
-            musicPlayer.classList.remove('loading');
-        });
     </script>
 
     <footer>
